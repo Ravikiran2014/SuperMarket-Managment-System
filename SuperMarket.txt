@@ -1,0 +1,842 @@
+import java.util.Scanner;
+
+public class SuperMarket {
+	static boolean shopping=true;
+	static int totalAmount = 0;
+	static String name;
+	static long monileno;
+	static String Emailid;
+	static String customerName;
+	static long customerNumber;
+	//static String name;
+	static long Mobileno;
+	private static Customer c1;
+	
+
+	
+	
+	static Scanner scn=new Scanner(System.in);
+	
+	public static void MainMenu() {
+		System.out.println("========== Menu ==========");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("*** Choose Below Option ***");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("=================================");
+		System.out.println("Press1: Personal care & Cosmatics");
+		System.out.println("Press2: Daity and Eggs");
+		System.out.println("Press3: Fruit and Veggies");
+		System.out.println("Press4: Bakery");
+		System.out.println("Press5: Bill Details");
+		System.out.println("=================================");
+		
+		
+		
+
+		switch(scn.nextInt()) {
+		case 1:{
+			PCC();
+			break;
+		}
+		case 2:{
+			DE();
+			break;
+		}
+		case 3:{
+			FV();
+		}
+		case 4:{
+			Bakery();
+			break;
+		}
+		case 5:{
+			Bill(); 
+			
+			
+			System.out.println(c1);
+			System.exit(0);
+			break;  
+		}
+		default:
+			System.out.println("Your choosing invalid option");
+		}
+		
+		
+	}
+	
+	
+	
+	public static void PCC() {
+		while(shopping) {
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("|| ======Mama Earth Products====== ||");
+		System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+		System.out.println("Press1: BabySoaps-----------199Rs");
+		System.out.println("Press2: LipBalm--------------99Rs");
+		System.out.println("Press3: FaceMask------------100Rs");
+		System.out.println("Press4: Lipstick-------------129R");
+		System.out.println("Press5: Soap-----------------70Rs");
+		System.out.println("Press6: HairOil-------------299Rs");
+		System.out.println("Press7: MainMenu");
+		System.out.println("Press8: Finish and Checkout");
+		
+		int productchoice=scn.nextInt();
+		int quantity;
+		
+		switch(productchoice) {
+		case 1:{
+			System.out.println("-------------------------------");
+			System.out.println("Enter the quantity of BabySoaps: ");
+			System.out.println("-------------------------------");
+			quantity=scn.nextInt();
+			totalAmount+=quantity*199;
+			System.out.println("....................................");
+			System.out.println("Added "+quantity+" Baby soap to cart");
+			System.out.println("....................................");
+			System.out.println();
+			System.out.println("---------------------------");
+			System.out.println("||    Press1: For PCC    ||");
+			System.out.println("|| Press2: For Main menu ||");
+			System.out.println("---------------------------");
+			//break;
+//			switch(scn.nextInt()) {
+//			case 1:{
+//				
+//			}
+			switch(scn.nextInt()){
+			case 1:{
+				PCC();
+				break;
+			}
+			case 2:{
+				MainMenu();
+				break;
+			}
+			default:
+				System.out.println("Invalid Option");
+			}
+			}
+		
+		case 2:{
+			System.out.println("-------------------------------");
+			System.out.println(  "Enter the quantity of LipBalm: ");
+			System.out.println("-------------------------------");
+			quantity=scn.nextInt();
+			totalAmount+=quantity*99;
+			System.out.println("..................................");
+			System.out.println("Added "+quantity+" LipBalm to cart");
+			System.out.println("..................................");
+			System.out.println();
+			System.out.println("---------------------------");
+			System.out.println("||    Press1: For PCC    ||");
+			System.out.println("|| Press2: For Main menu ||");
+			System.out.println("---------------------------");
+			switch(scn.nextInt()){
+			case 1:{
+				PCC();
+				break;
+			}
+			case 2:{
+				MainMenu();
+				break;
+			}
+			default:
+				System.out.println("Invalid Option");
+			}
+			}
+		
+		case 3:{
+			System.out.println("--------------------------------");
+			System.out.println("Enter the quantity of FaceMask: ");
+			System.out.println("--------------------------------");
+			quantity=scn.nextInt();
+			totalAmount+=quantity*100;
+			System.out.println("...................................");
+			System.out.println("Added "+quantity+" FaceMask to cart");
+			System.out.println("...................................");
+			System.out.println();
+			System.out.println("---------------------------");
+			System.out.println("||    Press1: For PCC    ||");
+			System.out.println("|| Press2: For Main menu ||");
+			System.out.println("---------------------------");
+			switch(scn.nextInt()){
+			case 1:{
+				PCC();
+				break;
+			}
+			case 2:{
+				MainMenu();
+				break;
+			}
+			default:
+				System.out.println("Invalid Option");
+			}
+			}
+		
+		case 4:{
+			System.out.println("------------------------------");
+			System.out.println("Enter the quantity of LipStick: ");
+			System.out.println("------------------------------");
+			quantity=scn.nextInt();
+			totalAmount+=quantity*129;
+			System.out.println("...................................");
+			System.out.println("Added "+quantity+" LipStick to cart");
+			System.out.println("...................................");
+			System.out.println();
+			System.out.println("---------------------------");
+			System.out.println("||    Press1: For PCC    ||");
+			System.out.println("|| Press2: For Main menu ||");
+			System.out.println("---------------------------");
+			switch(scn.nextInt()){
+			case 1:{
+				PCC();
+				break;
+			}
+			case 2:{
+				MainMenu();
+				break;
+			}
+			default:
+				System.out.println("Invalid Option");
+			}
+			}
+		
+		case 5:{
+			System.out.println("----------------------------");
+			System.out.println("Enter the quantity of Soap: ");
+			System.out.println("----------------------------");
+			quantity=scn.nextInt();
+			totalAmount+=quantity*70;
+			System.out.println("...............................");
+			System.out.println("Added "+quantity+" Soap to cart");
+			System.out.println("...............................");
+			System.out.println();
+			System.out.println("---------------------------");
+			System.out.println("||    Press1: For PCC    ||");
+			System.out.println("|| Press2: For Main menu ||");
+			System.out.println("---------------------------");
+			switch(scn.nextInt()){
+			case 1:{
+				PCC();
+				break;
+			}
+			case 2:{
+				MainMenu();
+				break;
+			}
+			default:
+				System.out.println("Invalid Option");
+			}
+			}
+	
+		case 6:{
+			System.out.println("-------------------------------");
+			System.out.println("Enter the quantity of HariOil: ");
+			System.out.println("-------------------------------");
+			quantity=scn.nextInt();
+			totalAmount+=quantity*249;
+			System.out.println("..................................");
+			System.out.println("Added "+quantity+" HairOil to cart");
+			System.out.println("..................................");
+			System.out.println();
+			System.out.println("---------------------------");
+			System.out.println("||    Press1: For PCC    ||");
+			System.out.println("|| Press2: For Main menu ||");
+			System.out.println("---------------------------");
+			switch(scn.nextInt()){
+			case 1:{
+				PCC();
+				break;
+			}
+			case 2:{
+				MainMenu();
+				break;
+			}
+			default:
+				System.out.println("Invalid Option");
+			}
+			}
+		
+		case 7:{
+			MainMenu();
+			break;
+			
+		}
+		 case 8: {
+            shopping = false; // Exit the loop and proceed to checkout
+             break;
+		 }
+		default:
+			System.out.println("Invalid option");	
+		}
+		}
+		
+	}
+
+	public static void DE() {
+		
+	}
+	public static void FV() {	
+		while(shopping) {
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("||    WelCome to Fruit and Vegitables    ||");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("1.Tamato(1Kg)--------------------------50Rs");
+			System.out.println("2.Beetroot(1kg)------------------------69Rs");
+			System.out.println("3.Mushroom(250gm)---------------------100Rs");
+			System.out.println("4.Carrot(500gm)------------------------45Rs");
+			System.out.println("5.Brinjal(1kg)-------------------------49Rs");
+			System.out.println("6.Potato(1kg)--------------------------65Rs");
+			System.out.println("7.Apple(Each Apple)--------------------30Rs");
+			System.out.println("8.Orange(Each Orange)------------------29Rs");
+			System.out.println("9.Strawberry(1 Pack contain 7 pices)--100Rs");
+			System.out.println("10.Dragon Fruit------------------------90Rs");
+			System.out.println("11.MainMenu");
+			System.out.println("12.Checkout");
+			System.out.println("===========================================");
+			
+			int productchoice=scn.nextInt();
+			int quantity;
+			switch(productchoice) {
+			case 1:{
+				System.out.println("---------------------------");
+				System.out.println("Enter the quantity in kgs: ");
+				System.out.println("---------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*50;
+				System.out.println("......................................");
+				System.out.println("Added "+quantity+" kgs Tomoto to cart");
+				System.out.println("......................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 2:{
+				System.out.println("---------------------------");
+				System.out.println("Enter the quantity in kgs: ");
+				System.out.println("---------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*69;
+				System.out.println("......................................");
+				System.out.println("Added "+quantity+" kgs Betroot to cart");
+				System.out.println("......................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 3:{
+				System.out.println("-----------------------");
+				System.out.println("Enter the quntity in grms");
+				System.out.println("-----------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*100;
+				System.out.println("...........................................");
+				System.out.println("Added "+quantity+" gms Mushrooms to cart");
+				System.out.println("...........................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 4:{
+				System.out.println("----------------------");
+				System.out.println("Enter the Carrot in grms");
+				System.out.println("----------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*45;
+				System.out.println("........................................");
+				System.out.println("Added "+quantity+" gms Carrot to cart");
+				System.out.println("........................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 5:{
+				System.out.println("-----------------------------");
+				System.out.println("Enter the quantity in Bringal: ");
+				System.out.println("-----------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*49;
+				System.out.println("..........................................");
+				System.out.println("  Added "+quantity+" kgs Bringle to cart  ");
+				System.out.println("..........................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 6:{
+				System.out.println("-------------------------");
+				System.out.println("Enter the quantity Potato: ");
+				System.out.println("-------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*65;
+				System.out.println("........................................");
+				System.out.println("Added "+quantity+" kgs Potato to cart");
+				System.out.println("........................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 7:{
+				System.out.println("------------------------------------");
+				System.out.println("Enter the quantity Apple(Each apple): ");
+				System.out.println("------------------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*30;
+				System.out.println("............................................");
+				System.out.println("Added "+quantity+ "Each Apple to add cart");
+				System.out.println("............................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 8:{
+				System.out.println("----------------------");
+				System.out.println("Enter the no of Orange");
+				System.out.println("----------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*29;
+				System.out.println("....................................................");
+				System.out.println("Added "+quantity+" Orange fruits add in your cart");
+				System.out.println("....................................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 9:{
+				System.out.println("-------------------------------------");
+				System.out.println("Enter the quantity Straberry(in pack)");
+				System.out.println("-------------------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*100;
+				System.out.println("....................................................");
+				System.out.println("Added "+quantity+" Straberry packets in your cart");
+				System.out.println("....................................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 10:{
+				System.out.println("---------------------------");
+				System.out.println("Enter the no of Dragon Fruits");
+				System.out.println("---------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*90;
+				System.out.println("...............................................");
+				System.out.println("Added "+quantity+" Dragon fruits add in cart");
+				System.out.println("...............................................");
+				System.out.println();
+				System.out.println("---------------------------");
+				System.out.println("||    Press1: For FV     ||");
+				System.out.println("|| Press2: For Main menu ||");
+				System.out.println("---------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					FV();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			case 11:{
+				MainMenu();
+				break;
+			}
+				
+			
+			case 12: {
+	            shopping = false; // Exit the loop and proceed to checkout
+	             break;
+			 }
+
+			default:
+				System.out.println("Invalid Option");
+			}
+		}
+		//checkout1();
+	}
+
+	public static void Bakery() {
+		while(shopping) {
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("||@@  WelCome to Bakery  @@||");
+			System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+			System.out.println("1.Chocolate cake-------200:  ");
+			System.out.println("2.Straberry cake-------220:  ");
+			System.out.println("3.Vennala cake---------180:  ");
+			System.out.println("4.Coolcake-------------320:  ");
+			System.out.println("5.MainMenu");
+			System.out.println("=============================");
+			
+			int productchoice=scn.nextInt();
+			int quantity;
+			switch(productchoice) {
+			case 1:{
+				System.out.println("---------------------------------");
+				System.out.println("Order the Chocolate cake(in kgs):");
+				System.out.println("---------------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*200;
+				System.out.println(".............................................");
+				System.out.println("Added "+quantity+" kgs Chocolate cake in cart");
+				System.out.println(".............................................");
+				System.out.println();
+				System.out.println("-------------------------------");
+				System.out.println("||    Press1: For Bakery     ||");
+				System.out.println("||   Press2: For Main menu   ||");
+				System.out.println("-------------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					Bakery();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			
+			case 2:{
+				System.out.println("---------------------------------");
+				System.out.println("Order the Straberry cake(in kgs):");
+				System.out.println("---------------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*220;
+				System.out.println(".............................................");
+				System.out.println("Added "+quantity+" kgs Straberry cake in cart");
+				System.out.println(".............................................");
+				System.out.println();
+				System.out.println("-------------------------------");
+				System.out.println("||    Press1: For Bakery     ||");
+				System.out.println("||   Press2: For Main menu   ||");
+				System.out.println("-------------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					Bakery();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			case 3:{
+				System.out.println("-------------------------------");
+				System.out.println("Order the Vennala cake(in kgs):");
+				System.out.println("-------------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*180;
+				System.out.println("...........................................");
+				System.out.println("Added "+quantity+" kgs Vennala cake in cart");
+				System.out.println("...........................................");
+				System.out.println();
+				System.out.println("-------------------------------");
+				System.out.println("||    Press1: For Bakery     ||");
+				System.out.println("||   Press2: For Main menu   ||");
+				System.out.println("-------------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					Bakery();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			case 4:{
+				System.out.println("----------------------------");
+				System.out.println("Order the Cool cake(in kgs):");
+				System.out.println("----------------------------");
+				quantity=scn.nextInt();
+				totalAmount+=quantity*320;
+				System.out.println("........................................");
+				System.out.println("Added "+quantity+" kgs Cool cake in cart");
+				System.out.println("........................................");
+				System.out.println();
+				System.out.println("-------------------------------");
+				System.out.println("||    Press1: For Bakery     ||");
+				System.out.println("||   Press2: For Main menu   ||");
+				System.out.println("-------------------------------");
+				switch(scn.nextInt()){
+				case 1:{
+					Bakery();
+					break;
+				}
+				case 2:{
+					MainMenu();
+					break;
+				}
+				default:
+					System.out.println("Invalid Option");
+				}
+				}
+			case 5:{
+				MainMenu();
+			}
+			default:
+				System.out.println("Invalid option");
+		}
+		}
+		
+		
+	}
+	public static void Bill() {
+		double discount=totalAmount*.10;
+		double discountamount=totalAmount-discount;
+		
+		System.out.println("***********************************");
+		System.out.println("Congratulation you Got 10% Discount");
+		System.out.println("***********************************");
+		System.out.println();
+		System.out.println("*******************************************");
+		System.out.println("Your total bill is: " + totalAmount + " Rs.");
+		System.out.println("*******************************************");
+		System.out.println();
+		System.out.println("***********************************************");
+		System.out.println("Discounted total(10% off) "+discountamount+" Rs");
+		System.out.println("***********************************************");
+		System.out.println();
+		System.out.println("<<<<--------------------------------->>>>");
+        System.out.println("!!@@  Thank you for shopping with us @@!!");
+        System.out.println("<<<<--------------------------------->>>>");
+        System.out.println();
+        
+        
+        
+        
+        
+       // MainMenu();
+	}
+	
+	public static void main(String[] args) {
+		
+		//Details();
+		System.out.println("==========================================");
+		System.out.println("||======= WelCome To SuperMarket =======||");
+		System.out.println("==========================================");
+		System.out.println("||  @Enter your Name  ||");
+		System.out.println("==========================================");
+		String name=scn.nextLine();
+		//System.out.println("Your name is:"+name);
+		System.out.println("===========================");
+		System.out.println("||  Enter your MobileNo  ||");
+		System.out.println("===========================");
+		long Mobileno=scn.nextLong();
+		    
+
+		System.out.println("==========================");
+		System.out.println("||  Enter your EmailId  ||");
+		System.out.println("==========================");
+		scn.nextLine();
+		String Emailid=scn.nextLine();
+	
+		SuperMarket s=new SuperMarket();
+		Customer c1=new Customer(name, Mobileno, Emailid);
+		s.addCustomer(c1);
+		MainMenu();
+		
+		
+	}
+	
+	public void addCustomer(Customer c) {
+		this.c1=c;
+	}
+
+}
+
+
+
+
+import java.time.LocalDateTime;
+
+public class Customer {
+	
+	private LocalDateTime ldt;
+	private String name;
+	private long Mobileno;
+	private String EmailId;
+	public Customer(String name, long mobileno, String emailId) {
+		super();
+		this.ldt = LocalDateTime.now();
+		this.name = name;
+		Mobileno = mobileno;
+		EmailId = emailId;
+	}
+	public LocalDateTime getLdt() {
+		return ldt;
+	}
+	public void setLdt(LocalDateTime ldt) {
+		this.ldt = ldt;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public long getMobileno() {
+		return Mobileno;
+	}
+	public void setMobileno(long mobileno) {
+		Mobileno = mobileno;
+	}
+	public String getEmailId() {
+		return EmailId;
+	}
+	public void setEmailId(String emailId) {
+		EmailId = emailId;
+	}
+	@Override
+	public String toString() {
+		return "Customer name="+name+"\n\n"+ "Mobileno=" + Mobileno+"\n\n"+"EmailId=" + EmailId +"\n\n"+"[ldt=" + ldt  +  "]";
+	}
+}
